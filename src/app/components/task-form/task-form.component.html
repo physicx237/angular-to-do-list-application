@@ -1,0 +1,13 @@
+<div class="task-form">
+  <h1>Task Form</h1>
+
+  <button (click)="navigateToTasksList()">Navigate To Tasks List</button>
+
+  <form [formGroup]="taskForm">
+    <input formControlName="description" />
+  </form>
+
+  <button (click)="mode === 'add' ? addTask() : editTask()">
+    {{ mode === 'add' ? 'Add' : 'Edit' }} Task
+  </button>
+</div>

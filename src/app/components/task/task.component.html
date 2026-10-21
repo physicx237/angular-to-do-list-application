@@ -1,0 +1,9 @@
+<div class="task">
+  <div>{{ task()?.description }}</div>
+
+  <div class="task__actions-buttons">
+    <button (click)="navigateToEditTaskForm()">Edit Task</button>
+
+    <input type="checkbox" [checked]="task()?.completed" (change)="toggleTaskCompletion()" />
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="tasks-list">
+  <h1>Tasks List</h1>
+
+  <button (click)="navigateToAddTaskForm()">Add Task</button>
+
+  @for (item of tasks; track item.id) {
+    <app-task [task]="item"></app-task>
+  }
+</div>
